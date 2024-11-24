@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata1", "Kata1\Kata1.csproj", "{6F8CE89B-2648-47FF-AB3D-14E2A0ED9F3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata2", "Kata2\Kata2.csproj", "{F1EBDE01-D63C-41BD-8573-F4B75DA9ADAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6F8CE89B-2648-47FF-AB3D-14E2A0ED9F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8CE89B-2648-47FF-AB3D-14E2A0ED9F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8CE89B-2648-47FF-AB3D-14E2A0ED9F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EBDE01-D63C-41BD-8573-F4B75DA9ADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EBDE01-D63C-41BD-8573-F4B75DA9ADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EBDE01-D63C-41BD-8573-F4B75DA9ADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EBDE01-D63C-41BD-8573-F4B75DA9ADAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

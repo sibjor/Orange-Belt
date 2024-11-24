@@ -10,7 +10,7 @@ namespace Kata1
         private Character _healer;
         private Random _random = new();
 
-        public Level1(int warriorsCount)
+        public Level1(int warriorsCount) // Serves as the "gameloop"
         {
             InitWarriors(warriorsCount);
             InitHealer();
