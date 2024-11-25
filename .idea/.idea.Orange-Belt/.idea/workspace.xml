@@ -11,7 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b4e274d-0d25-4017-bdd6-1d225ea5d7e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Orange-Belt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orange-Belt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orange-Belt.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Orange-Belt.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata1/Level1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Kata1/Level1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata2/Level1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Kata2/Level1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1732175852447" duration="26889000" />
       <workItem from="1732218279452" duration="9912000" />
       <workItem from="1732469289115" duration="1801000" />
-      <workItem from="1732523696344" duration="615000" />
+      <workItem from="1732523696344" duration="2406000" />
     </task>
     <servers />
   </component>

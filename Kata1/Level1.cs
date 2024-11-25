@@ -18,11 +18,11 @@ namespace Kata1
             while (_warriors.Count > 1)
             {
                 _warriors.RemoveAll(w => w.Health <= 0);
-                
+
                 var warriorsToAttack = _warriors.OrderBy(w => w.Health < 50 ? 0 : 1).ThenBy(w => w.Health).ToList();
-                
+
                 var attacker = warriorsToAttack.First();
-                
+
                 var validTargets = _warriors.Where(w => w != attacker).ToList();
                 if (validTargets.Count > 0)
                 {
@@ -30,12 +30,12 @@ namespace Kata1
                     attacker.PrimaryAction(attacker, target);
                     Console.WriteLine($"{attacker.Name} attacks {target.Name} for {attacker.Damage} damage. {target.Name}'s health is now {target.Health}");
                 }
-                
+
                 var lowestHealthWarrior = _warriors.OrderBy(w => w.Health).First();
                 _healer.PrimaryAction(_healer, lowestHealthWarrior);
                 Console.WriteLine($"{_healer.Name} heals {lowestHealthWarrior.Name} for {_healer.Mana}. {lowestHealthWarrior.Name}'s health is now {lowestHealthWarrior.Health}");
             }
-            
+
             if (_warriors.Count == 1)
             {
                 Console.WriteLine($"The battle is over! {_warriors[0].Name} is the last warrior standing with {_warriors[0].Health} health.");
@@ -48,10 +48,10 @@ namespace Kata1
             {
                 _warriors.Add(new Character(
                     $"Warrior {i + 1}",
-                    55, 
+                    55,
                     25,
-                    0, 
-                    (self, target) => target.Health -= self.Damage
+                    0,
+                    (self, target) => target.TakeDamage(self.Damage)
                 ));
             }
         }
@@ -63,18 +63,18 @@ namespace Kata1
                 55,
                 0,
                 15,
-                (self, target) => target.Health += self.Mana 
+                (self, target) => target.Heal(self.Mana)
             );
         }
     }
 
     public class Character
     {
-        public string Name { get; set; }
-        public int Health { get; set; }
-        public int Damage { get; set; }
-        public int Mana { get; set; }
-        public Action<Character, Character> PrimaryAction { get; set; }
+        public string Name { get; }
+        public int Health { get; private set; }
+        public int Damage { get; }
+        public int Mana { get; }
+        public Action<Character, Character> PrimaryAction { get; }
 
         public Character(string name, int health, int damage, int mana, Action<Character, Character> primaryAction)
         {
@@ -84,6 +84,15 @@ namespace Kata1
             Mana = mana;
             PrimaryAction = primaryAction;
         }
+
+        public void TakeDamage(int damage)
+        {
+            Health = Math.Max(0, Health - damage);
+        }
+
+        public void Heal(int amount)
+        {
+            Health += amount;
+        }
     }
-    
 }
